@@ -1,0 +1,8 @@
+output/*
+lib/*
+bin/*
+include/*
+.Python
+*.un~
+*.py[cod]
+*.py
