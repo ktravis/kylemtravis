@@ -1,0 +1,14 @@
+{% extends "index.html" %}
+
+
+{% block page_title %}Blog / {{ article.title }}{% endblock %}
+{% block content %}
+<h3>{{ article.title }}</h3>
+<blockquote class="post-main"><em class="post-date"> written {{ article.locale_date }}</em>
+<p> {{ article.content }}</p>
+</blockquote>
+<small><a href="{{ SITEURL }}/blog">back to entries</a></small>
+{{ super() }}
+{% endblock %}
+
+
