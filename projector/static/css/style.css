@@ -103,3 +103,4 @@ a:hover {
     padding-top: 7px;
 }
 .post-main p a:link { text-decoration: underline; }
+.post-main { font-size: 0.97em;  }
