@@ -1,0 +1,7 @@
+{{ template "base.html" . }}
+
+{{ define "breadcrumbs" }}/{{.file.Metadata.title}}{{ end }}
+
+{{ define "body" }}
+{{ .file.Content }}
+{{ end }}

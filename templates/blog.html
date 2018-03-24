@@ -1,0 +1,40 @@
+{{ template "base.html" . }}
+
+{{ define "breadcrumbs"}}{{ if .file.Metadata.name }}/<a href="/blog/">blog</a>/{{ or .file.Metadata.slug (.file.Metadata.name|slugify) }}{{ else }}/blog{{ end }}{{ end }}
+
+{{ define "article-header" }}
+<div class="blog-post-header">
+
+    <h2 class="blog-post-title"><a href="{{ .Path }}">{{ .Metadata.name }}</a></h2>
+
+    <p class="meta">
+    by
+
+    <a href="https://twitter.com/kmakai">Kyle Travis</a>
+
+    on {{ or .Metadata.published "now" }}
+    </p>
+</div>
+{{ end }}
+
+{{ define "article" }}
+<div class="blog-post">
+    {{ template "article-header" . }}
+
+    {{ .Content }}
+</div>
+{{ end }}
+
+{{ define "body" }}
+    {{ if .file.Metadata.name }}
+        {{ template "article" .file }}
+    {{ else }}
+        {{ range .root.blog | sortItems "-published" }}
+            <div class="blog-post">
+                {{ template "article-header" . }}
+
+                {{ readmore .Content .Path }}
+            </div>
+        {{ end }}
+    {{ end }}
+{{ end }}

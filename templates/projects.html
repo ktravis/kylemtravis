@@ -1,0 +1,27 @@
+{{ template "base.html" . }}
+
+{{ define "breadcrumbs" }}/projects{{ end }}
+
+{{ define "body" }}
+<div class="projects">
+    {{ range .root.projects | sortItems "-year" }}
+    <div class="project">
+        {{if .Metadata.url}}<a class="thumbnail" href="{{.Metadata.url}}">{{end}}
+            <img src="{{.Metadata.thumbnail}}">
+        {{if .Metadata.url}}</a>{{end}}
+        <div class="project-inner">
+            <h2 class="project-title">
+                <span>
+                    {{if .Metadata.url}}<a href="{{.Metadata.url}}">{{end}}
+                        {{.Metadata.name}}
+                    {{if .Metadata.url}}</a>{{end}}
+                    {{if .Metadata.year}}<span class="project-year">{{.Metadata.year}}</span>{{end}}
+                </span>
+                {{if .Metadata.type}}<span class="project-type">{{.Metadata.type}}</span>{{end}}
+            </h2>
+            {{ .Content }}
+        </div>
+    </div>
+    {{ end }}
+</div>
+{{ end }}
