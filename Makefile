@@ -5,8 +5,7 @@ clean:
 
 SSGEN_BIN ?= ./ssgen
 
-build:
-	which ssgen || (  )
+build: $(SSGEN_BIN)
 	$(SSGEN_BIN) -in src -out build
 	cp -R static/ build/
 
