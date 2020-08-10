@@ -4,7 +4,7 @@ clean:
 	rm -rf build/*
 
 build:
-	which ssgen || go install github.com/ktravis/ssgen
+	which ssgen || go get github.com/ktravis/ssgen
 	ssgen -in src -out build
 	cp -R static/ build/
 
