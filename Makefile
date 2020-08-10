@@ -5,7 +5,7 @@ clean:
 
 build:
 	which ssgen || go get github.com/ktravis/ssgen
-	ssgen -in src -out build
+	$(go env GOPATH)/bin/ssgen -in src -out build
 	cp -R static/ build/
 
 deploy: build
