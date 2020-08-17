@@ -5,7 +5,7 @@ Hello there! With just over a day remaining in the voting period, it seemed like
 
 **Of course, if you haven't played the game yet I would *love* to get your feedback! Visit the [game page here](http://ludumdare.com/compo/ludum-dare-34/?action=preview&amp;uid=28426).**
 
-<div class="captioned-center-image"><img src="http://ludumdare.com/compo/wp-content/uploads/2016/01/ld48-preview.gif"><p class="caption"><a href="http://ludumdare.com/compo/ludum-dare-34/?action=preview&amp;uid=28426">Cultivate is an adventure/visual-novel-like game about a day of high school.</a></p></div>
+<div class="captioned-center-image"><img src="/static/images/blog/cultivate-post-mortem/ld48-preview.gif"><p class="caption"><a href="http://ludumdare.com/compo/ludum-dare-34/?action=preview&amp;uid=28426">Cultivate is an adventure/visual-novel-like game about a day of high school.</a></p></div>
 
 ## Overview
 
@@ -45,7 +45,7 @@ I'm not sure whether anyone has seen some of them yet, so if you play I'd love t
 - **Paint.NET** - I briefly attempted a more "painterly" art style, before deciding on something more simplified. The main reason for this was time -- I had to crank out all of the "background" art for the game in less than 2 hours. Second, I wanted something stylized that left most of the detail to the player's imagination. Ultimately I am pleased with the outcome, though I had planned to create more variety.
 
 <div class="center-image">
-    <img src="http://ludumdare.com/compo/wp-content/uploads/2016/01/cultivate-1-550x413.png" />
+    <img src="/static/images/blog/cultivate-post-mortem/cultivate-1-550x413.png" />
 </div>
 
 - **[BFXR](http://www.bfxr.net/)** - An amazing tool for generating 8/16-bit sound effects. Use it!
@@ -113,7 +113,7 @@ Overall my favorite part of this Ludum Dare has been playing everyone's entries,
 <div>
 I love this entry: the style, the concept, the music -- all fantastic!
 </div>
-<a href="http://ludumdare.com/compo/ludum-dare-34/?action=preview&amp;uid=7984"><img class="alignright" src="http://ludumdare.com/compo/wp-content/compo2//511439/7984-shot0-1450145288.png-eq-900-500.jpg" alt="" width="387" height="215" /></a>
+<a href="http://ludumdare.com/compo/ludum-dare-34/?action=preview&amp;uid=7984"><img class="alignright" src="/static/images/blog/cultivate-post-mortem/7984-shot0-1450145288.png-eq-900-500.jpg" alt="" width="387" height="215" /></a>
 </div>
 
 <h4><a href="Jam">Grow Your Love (Jam)</a></h4>
@@ -121,7 +121,7 @@ I love this entry: the style, the concept, the music -- all fantastic!
 <div>
 Another amazing interpretation of the themes. I can't overstate how charmed I was by the aesthetic and music -- though it should be mentioned how cleverly the gameplay is designed. Even for the Jam, I am amazed by the level of polish here.
 </div>
-<a href="http://ludumdare.com/compo/ludum-dare-34/?action=preview&amp;uid=7285"><img class="alignright" src="http://ludumdare.com/compo/wp-content/compo2//511439/7285-shot0-1450286764.png-eq-900-500.jpg" alt="" width="387" height="218" /></a>
+<a href="http://ludumdare.com/compo/ludum-dare-34/?action=preview&amp;uid=7285"><img class="alignright" src="/static/images/blog/cultivate-post-mortem/7285-shot0-1450286764.png-eq-900-500.jpg" alt="" width="387" height="218" /></a>
 </div>
 
 <h4><a href="http://ludumdare.com/compo/ludum-dare-34/?action=preview&amp;uid=51259">Acrodog</a></h4>
@@ -129,7 +129,7 @@ Another amazing interpretation of the themes. I can't overstate how charmed I wa
 <div>
 Adorable, challenging and addictive. This was another entry that seemed to naturally fit within the theme while feeling very unique.
 </div>
-<a href="http://ludumdare.com/compo/ludum-dare-34/?action=preview&amp;uid=51259"><img class="alignright" src="http://ludumdare.com/compo/wp-content/compo2/511439/51259-shot2-1450059185.gif" alt="" width="389" height="243" /></a>
+<a href="http://ludumdare.com/compo/ludum-dare-34/?action=preview&amp;uid=51259"><img class="alignright" src="/static/images/blog/cultivate-post-mortem/51259-shot2-1450059185.gif" alt="" width="389" height="243" /></a>
 </div>
 
 <h4><a href="http://ludumdare.com/compo/ludum-dare-34/?action=preview&amp;uid=10217">Tamamystery</a></h4>
@@ -137,7 +137,7 @@ Adorable, challenging and addictive. This was another entry that seemed to natur
 <div>
 I don't think I can accurately describe this one, other than to say it was very clever! Lots of nostalgia, and a very complete experience.
 </div>
-<a href="http://ludumdare.com/compo/ludum-dare-34/?action=preview&amp;uid=10217"><img class="alignright" src="http://ludumdare.com/compo/wp-content/compo2//511439/10217-shot3-1450061837.png-eq-900-500.jpg" alt="" width="220" height="270" /></a>
+<a href="http://ludumdare.com/compo/ludum-dare-34/?action=preview&amp;uid=10217"><img class="alignright" src="/static/images/blog/cultivate-post-mortem/10217-shot3-1450061837.png-eq-900-500.jpg" alt="" width="220" height="270" /></a>
 </div>
 
 <h4><a href="http://ludumdare.com/compo/ludum-dare-34/?action=preview&amp;uid=18943">The Serpent's Shadow</a></h4>
@@ -145,7 +145,7 @@ I don't think I can accurately describe this one, other than to say it was very 
 <div>
 Created for/with <a href="http://www.lexaloffle.com/pico-8.php" target="_blank">Pico8</a>, this is a fantastic puzzle game with a great visual style, music, and a puzzle-solving mechanic that feels really innovative.
 </div>
-<a href="http://ludumdare.com/compo/ludum-dare-34/?action=preview&amp;uid=18943"><img class="alignright" src="http://ludumdare.com/compo/wp-content/compo2//511439/18943-shot2-1450053737.png-eq-900-500.jpg" alt="" width="331" height="331" /></a>
+<a href="http://ludumdare.com/compo/ludum-dare-34/?action=preview&amp;uid=18943"><img class="alignright" src="/static/images/blog/cultivate-post-mortem/18943-shot2-1450053737.png-eq-900-500.jpg" alt="" width="331" height="331" /></a>
 </div>
 
 <h4><a href="http://ludumdare.com/compo/ludum-dare-34/?action=preview&amp;uid=15514">Initial Conditions</a></h4>
@@ -153,7 +153,7 @@ Created for/with <a href="http://www.lexaloffle.com/pico-8.php" target="_blank">
 <div>
 A deceptively simple puzzle game. Overall this entry had excellent design, and some really challenging levels. Beyond that, it even incorporates impressive voice-acting between puzzles.
 </div>
-<a href="http://ludumdare.com/compo/ludum-dare-34/?action=preview&amp;uid=15514"><img class="alignright" src="http://ludumdare.com/compo/wp-content/compo2//511439/15514-shot1-1450058247.png-eq-900-500.jpg" alt="" width="387" height="274" /></a>
+<a href="http://ludumdare.com/compo/ludum-dare-34/?action=preview&amp;uid=15514"><img class="alignright" src="/static/images/blog/cultivate-post-mortem/15514-shot1-1450058247.png-eq-900-500.jpg" alt="" width="387" height="274" /></a>
 </div>
 
 <h4><a href="http://ludumdare.com/compo/ludum-dare-34/?action=preview&amp;uid=22357">Nomads</a></h4>
@@ -161,7 +161,7 @@ A deceptively simple puzzle game. Overall this entry had excellent design, and s
 <div>
 Moving and minimalist. Attempts a different type of game that fits the theme well, and succeeds in being captivating (to me, at least!)
 </div>
-<a href="http://ludumdare.com/compo/ludum-dare-34/?action=preview&amp;uid=22357"><img class="alignright" src="http://ludumdare.com/compo/wp-content/compo2//511439/22357-shot0-1450146808.png-eq-900-500.jpg" alt="" width="387" height="290" /></a>
+<a href="http://ludumdare.com/compo/ludum-dare-34/?action=preview&amp;uid=22357"><img class="alignright" src="/static/images/blog/cultivate-post-mortem/22357-shot0-1450146808.png-eq-900-500.jpg" alt="" width="387" height="290" /></a>
 </div>
 
 Though there were many others I played and greatly enjoyed, this list is already getting quite long! If you have an entry I haven't commented on, link it in the comments, I'd love to see it!
