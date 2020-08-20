@@ -1,0 +1,58 @@
+name: blog-post-release
+on:
+  pull_request:
+    branches: [ master ]
+jobs:
+  announce:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/github-script@v3
+      with:
+        github-token: ${{secrets.GITHUB_TOKEN}}
+        script: |
+          const pr = context.payload.pull_request
+          if (pr.state !== "open" && pr.merged_at === null) {
+            console.log("pr was not merged, skipping")
+            return
+          }
+          let urlBase = "https://kylemtravis.com/blog"
+          if (pr.state === "open")
+            urlBase = `https://deploy-preview-${pr.number}--kylemtravis.netlify.app/blog`
+          const result = await github.pulls.listFiles({
+            pull_number: pr.number,
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+          })
+          const added = result.data.filter(f => f.status === "added")
+          const newBlogPosts = added.filter(f => f.filename.match(/src\/blog\//) !== null)
+          if (newBlogPosts.length < 1)
+            return
+
+          const releaseName = newBlogPosts[0].patch.match(/@name\s*=\s*(.+)/)[1]
+          let slug = releaseName.toLowerCase().replace(/\s+/g, "-").replace(/[^a-zA-Z0-9\-]/g, "")
+          const slugMatch = newBlogPosts[0].patch.match(/@slug\s*=\s*(.+)/)
+          if (slugMatch && slugMatch.length > 1)
+            slug = slugMatch[1]
+
+          const rel = {
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            tag_name: `blog-pr-${pr.number}`,
+            target_commitish: pr.head.sha,
+            name: `[Blog Post] ${releaseName}`,
+            body: `New blog post, read it [here](${urlBase}/${slug})!`,
+            draft: pr.state === "open",
+          }
+          const rels = await github.repos.listReleases({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+          })
+          const found = rels.data.filter(r => r.draft && r.tag_name == rel.tag_name)
+          await (found.length > 1 ?
+            github.repos.updateRelease({
+              release_id: found[0].id,
+              ...rel
+            }) :
+            github.repos.createRelease(rel)
+          )
+
