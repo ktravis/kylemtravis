@@ -35,7 +35,7 @@ which allows easy use of the Octokit API directly from a workflow definition - i
 action. After a bit too much trial and error (thanks JavaScript) I ended up with this:
 
 ```yaml 
-# .github/worflows/release.yml
+# .github/workflows/release.yml
 name: blog-post-release
 on:
   pull_request:
