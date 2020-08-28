@@ -12,6 +12,3 @@ build: $(SSGEN_BIN)
 $(SSGEN_BIN):
 	go get github.com/ktravis/ssgen
 	go build -o $@ github.com/ktravis/ssgen
-
-deploy: build
-	gsutil -m rsync -r build/ gs://kylemtravis.com/
