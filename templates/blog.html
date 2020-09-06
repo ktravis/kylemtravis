@@ -25,6 +25,9 @@
 </div>
 {{ end }}
 
+
+{{ define "title" }}{{ if .file.Metadata.name }}{{ .file.Metadata.name }}{{ else }}kylemtravis - blog{{ end }}{{ end }}
+
 {{ define "body" }}
     {{ if .file.Metadata.name }}
         {{ template "article" .file }}

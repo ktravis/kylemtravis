@@ -1,9 +1,9 @@
 .PHONY: clean build deploy 
 
 clean:
-	rm -rf build/*
+	rm -rf build/* bin/*
 
-SSGEN_BIN ?= ./ssgen
+SSGEN_BIN ?= ./bin/ssgen
 
 build: $(SSGEN_BIN)
 	$(SSGEN_BIN) -in src -out build
