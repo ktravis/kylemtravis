@@ -22,11 +22,19 @@ jobs:
           const issues = Object.fromEntries(result.data.map(x => [x.title, x]))
           let lines = fs.readFileSync('posts.txt').toString().split('\n')
           lines.forEach(l => {
+          	  f = f.trim()
+          	  if (!f) return
               let [f, nameLine] = l.split(':')
-              console.log("opening", f)
-              const body = fs.readFileSync(f).toString().split('\n').map(x => x.trim()).filter(x => !x.match(/^@/)).join('\n')
-              const title = nameLine.slice(nameLine.indexOf('=')+1).trim()
               const labels = ["blog-post"]
+              const body = fs.readFileSync(f).toString().split('\n').map(x => {
+                x = x.trim()
+                if (x.match(/^@labels/)) labels = labels.concat(x.slice(x.indexOf('=')+1).trim()
+                return x
+              }).filter(x => !x.match(/^@/))
+              	.join('\n')
+              	.replace(/(\[[^\]]*\]\()(\/[^\)]+\))/, "$1https://github.com/ktravis/kylemtravis/blob/master$2")
+              	.replace(/(src=")(\/[^"]+")/, "$1https://github.com/ktravis/kylemtravis/blob/master$2")
+              const title = nameLine.slice(nameLine.indexOf('=')+1).trim()
               if (title in issues) {
                   const found = issues[title]
                   github.issues.update({
