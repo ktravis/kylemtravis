@@ -1,5 +1,6 @@
 @name = Cultivate Post-Mortem
 @published = 2016-01-03
+@labels = game,ludum-dare,unity
 
 Hello there! With just over a day remaining in the voting period, it seemed like a great time to finally write up a post-mortem for my experience this time around. I've included my favorites/recommendations of the entries that I've played so far **at the end of this post.**
 

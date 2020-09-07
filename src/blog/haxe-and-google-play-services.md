@@ -1,6 +1,7 @@
 @name = Haxe and Google Play Services
 @slug = play-haxe
 @published = 2014-10-07
+@labels = haxe
 
 Recently I decided I wanted to integrate Google Play Services -- leaderboards, achievements, etc -- with a Haxe/OpenFL project targetting Android devices. I assumed this should be easy enough given the ability to hook into Android/Java frameworks via native extensions. Overall it was simple, but not necessarily straightforward, so I'm writing this post as a quick start guide for others.
 

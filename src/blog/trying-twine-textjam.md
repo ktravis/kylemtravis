@@ -1,5 +1,6 @@
 @name = Trying Twine (TextJam)
 @published = 2014-06-24
+@labels = game,twine
 
 I was determined to participate in [TextJam](http://textjam.tumblr.com) last weekend, and without much time to devote I thought it could be smart to give Twine a try. Starting with a solid framework meant that once I had learned the syntax (and installed a few essential macros,) I could devote my remaining time to content and styling.
 
