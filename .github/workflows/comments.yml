@@ -14,6 +14,7 @@ jobs:
       with:
         github-token: ${{secrets.GITHUB_TOKEN}}
         script: |
+          const fs = require("fs")
           const result = await github.issues.listForRepo({
             owner: context.repo.owner,
             repo: context.repo.repo,
