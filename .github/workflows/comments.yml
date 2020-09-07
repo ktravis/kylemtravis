@@ -35,7 +35,7 @@ jobs:
               	.replace(/(!\[[^\]]*\]\()(\/[^\)]+\))/g, "$1https://github.com/ktravis/kylemtravis/raw/master$2") // MD image
               	.replace(/(\[[^\]]*\]\()(\/[^\)]+\))/g, "$1https://github.com/ktravis/kylemtravis/blob/master$2") // MD link
               	.replace(/(src=")(\/[^"]+")/g, "$1https://github.com/ktravis/kylemtravis/raw/master$2") // <img> tag
-              const title = nameLine.slice(nameLine.indexOf('=')+1).trim()
+              const title = '[blog] '+nameLine.slice(nameLine.indexOf('=')+1).trim()
               if (title in issues) {
                   const found = issues[title]
                   github.issues.update({
