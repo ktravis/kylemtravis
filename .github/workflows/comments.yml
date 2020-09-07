@@ -22,18 +22,19 @@ jobs:
           const issues = Object.fromEntries(result.data.map(x => [x.title, x]))
           let lines = fs.readFileSync('posts.txt').toString().split('\n')
           lines.forEach(l => {
-          	  f = f.trim()
-          	  if (!f) return
+          	  l = l.trim()
+          	  if (!l) return
               let [f, nameLine] = l.split(':')
               const labels = ["blog-post"]
               const body = fs.readFileSync(f).toString().split('\n').map(x => {
                 x = x.trim()
-                if (x.match(/^@labels/)) labels = labels.concat(x.slice(x.indexOf('=')+1).trim()
+                if (x.match(/^@labels/)) labels = labels.concat(x.slice(x.indexOf('=')+1).split(",").map(l => l.trim()))
                 return x
               }).filter(x => !x.match(/^@/))
               	.join('\n')
-              	.replace(/(\[[^\]]*\]\()(\/[^\)]+\))/, "$1https://github.com/ktravis/kylemtravis/blob/master$2")
-              	.replace(/(src=")(\/[^"]+")/, "$1https://github.com/ktravis/kylemtravis/blob/master$2")
+              	.replace(/(!\[[^\]]*\]\()(\/[^\)]+\))/g, "$1https://github.com/ktravis/kylemtravis/raw/master$2") // MD image
+              	.replace(/(\[[^\]]*\]\()(\/[^\)]+\))/g, "$1https://github.com/ktravis/kylemtravis/blob/master$2") // MD link
+              	.replace(/(src=")(\/[^"]+")/g, "$1https://github.com/ktravis/kylemtravis/raw/master$2") // <img> tag
               const title = nameLine.slice(nameLine.indexOf('=')+1).trim()
               if (title in issues) {
                   const found = issues[title]
