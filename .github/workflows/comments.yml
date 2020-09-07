@@ -1,0 +1,47 @@
+name: blog-post-create-issues
+on:
+  push:
+    branches: [ master ]
+jobs:
+  create:
+    runs-on: ubuntu-latest
+    steps:
+    - name: checkout
+      uses: actions/checkout@v2
+    - name: collect-titles
+      run: "grep '@name\s*\=' ./src/blog/ -R > posts.txt"
+    - uses: actions/github-script@v3
+      with:
+        github-token: ${{secrets.GITHUB_TOKEN}}
+        script: |
+          const result = await github.issues.listForRepo({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+          })
+          const issues = Object.fromEntries(result.data.map(x => [x.title, x]))
+          let lines = fs.readFileSync('posts.txt').toString().split('\n')
+          lines.forEach(l => {
+              let [f, nameLine] = l.split(':')
+              const body = fs.readFileSync(f).toString().split('\n').map(x => x.trim()).filter(x => !x.match(/^@/)).join('\n')
+              const title = nameLine.slice(nameLine.firstIndexOf('=')+1).trim()
+              const labels = ["blog-post"]
+              if (title in issues) {
+                  const found = issues[title]
+                  github.issues.update({
+                      owner: context.repo.owner,
+                      repo: context.repo.repo,
+                      issue_number: found.number,
+                      labels: found.labels.concat(labels),
+                      title,
+                      body,
+                  })
+                  return
+              }
+              github.issues.create({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  title,
+                  body,
+                  labels,
+              })
+          })
