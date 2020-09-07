@@ -9,7 +9,7 @@ jobs:
     - name: checkout
       uses: actions/checkout@v2
     - name: collect-titles
-      run: "grep '@name\s*\=' ./src/blog/ -R > posts.txt"
+      run: "grep -E '@name\\s*\\=' ./src/blog/ -R > posts.txt"
     - uses: actions/github-script@v3
       with:
         github-token: ${{secrets.GITHUB_TOKEN}}
