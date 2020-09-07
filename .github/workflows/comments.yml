@@ -25,7 +25,7 @@ jobs:
           	  l = l.trim()
           	  if (!l) return
               let [f, nameLine] = l.split(':')
-              const labels = ["blog-post"]
+              let labels = ["blog-post"]
               const body = fs.readFileSync(f).toString().split('\n').map(x => {
                 x = x.trim()
                 if (x.match(/^@labels/)) labels = labels.concat(x.slice(x.indexOf('=')+1).split(",").map(l => l.trim()))
