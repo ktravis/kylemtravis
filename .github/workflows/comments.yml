@@ -9,7 +9,7 @@ jobs:
     - name: checkout
       uses: actions/checkout@v2
     - name: collect-titles
-      run: "grep -E '@name\\s*\\=' ./src/blog/ -R > posts.txt"
+      run: "grep -E '@name\\s*\\=' ./src/blog/ -R > posts.txt && cat posts.txt"
     - uses: actions/github-script@v3
       with:
         github-token: ${{secrets.GITHUB_TOKEN}}
@@ -24,7 +24,7 @@ jobs:
           lines.forEach(l => {
               let [f, nameLine] = l.split(':')
               const body = fs.readFileSync(f).toString().split('\n').map(x => x.trim()).filter(x => !x.match(/^@/)).join('\n')
-              const title = nameLine.slice(nameLine.firstIndexOf('=')+1).trim()
+              const title = nameLine.slice(nameLine.indexOf('=')+1).trim()
               const labels = ["blog-post"]
               if (title in issues) {
                   const found = issues[title]
