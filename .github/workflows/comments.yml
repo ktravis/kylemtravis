@@ -27,15 +27,16 @@ jobs:
               let [f, nameLine] = l.split(':')
               let labels = ["blog-post"]
               const body = fs.readFileSync(f).toString().split('\n').map(x => {
-                x = x.trim()
-                if (x.match(/^@labels/)) labels = labels.concat(x.slice(x.indexOf('=')+1).split(",").map(l => l.trim()))
+                if (x.match(/^\s*@labels/)) {
+                  labels = labels.concat(x.trim().slice(x.indexOf('=')+1).split(",").map(l => l.trim()))
+                }
                 return x
               }).filter(x => !x.match(/^@/))
               	.join('\n')
               	.replace(/(!\[[^\]]*\]\()(\/[^\)]+\))/g, "$1https://github.com/ktravis/kylemtravis/raw/master$2") // MD image
               	.replace(/(\[[^\]]*\]\()(\/[^\)]+\))/g, "$1https://github.com/ktravis/kylemtravis/blob/master$2") // MD link
               	.replace(/(src=")(\/[^"]+")/g, "$1https://github.com/ktravis/kylemtravis/raw/master$2") // <img> tag
-              const title = '[blog] '+nameLine.slice(nameLine.indexOf('=')+1).trim()
+              const title = nameLine.slice(nameLine.indexOf('=')+1).trim()
               if (title in issues) {
                   const found = issues[title]
                   github.issues.update({
