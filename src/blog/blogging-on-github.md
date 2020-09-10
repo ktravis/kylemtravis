@@ -1,5 +1,6 @@
 @name = Blogging With GitHub
 @published = 2020-08-28
+@labels = meta
 
 _Obligatory "wow it's been so long since I've written here!"_
 

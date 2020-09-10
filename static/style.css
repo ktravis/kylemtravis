@@ -138,6 +138,18 @@ div.page {
 .blog-post {
     margin-bottom: 12px;
 }
+.blog-post p img {
+    display: block;
+    max-width: 100%;
+    max-height: 360px;
+    margin: auto;
+}
+.blog-post p img+em {
+	display: block;
+	text-align: center;
+	font-size: 0.85em;
+	margin-top: 0.85em;
+}
 .blog-post-header {
     margin-right: 7px;
     display: flex;
