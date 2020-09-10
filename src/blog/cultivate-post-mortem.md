@@ -154,7 +154,7 @@ Created for/with <a href="http://www.lexaloffle.com/pico-8.php" target="_blank">
 <div>
 A deceptively simple puzzle game. Overall this entry had excellent design, and some really challenging levels. Beyond that, it even incorporates impressive voice-acting between puzzles.
 </div>
-<a href="http://ludumdare.com/compo/ludum-dare-34/?action=preview&amp;uid=15514"><img class="alignright" src="/static/images/blog/cultivate-post-mortem/15514-shot1-1450058247.png" alt="" width="387" height="274" /></a>
+<a href="http://ludumdare.com/compo/ludum-dare-34/?action=preview&amp;uid=15514"><img class="alignright" src="/static/images/blog/cultivate-post-mortem/15514-shot0-1450058247.png" alt="" width="387" height="274" /></a>
 </div>
 
 <h4><a href="http://ludumdare.com/compo/ludum-dare-34/?action=preview&amp;uid=22357">Nomads</a></h4>
