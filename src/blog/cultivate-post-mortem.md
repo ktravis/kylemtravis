@@ -109,15 +109,15 @@ This system has a fair number of limitations, but it did allow me to write the s
 
 Overall my favorite part of this Ludum Dare has been playing everyone's entries, I've seen so many that blew me away! The theme(s) really seemed to inspire people this time around. Here are a few that I wanted to mention fondness for -- again in now particular order, and I'm sorry if I've forgotten to include your entry! It's hard to remember all of the amazing games.
 
-<h4><a href="Jam">Fruit Wolf (Jam)</a></h4>
+<h4><a href="http://ludumdare.com/compo/ludum-dare-34/?action=preview&uid=7984">Fruit Wolf (Jam)</a></h4>
 <div class="image-right">
 <div>
 I love this entry: the style, the concept, the music -- all fantastic!
 </div>
-<a href="http://ludumdare.com/compo/ludum-dare-34/?action=preview&amp;uid=7984"><img class="alignright" src="/static/images/blog/cultivate-post-mortem/7984-shot0-1450145288.png-eq-900-500.jpg" alt="" width="387" height="215" /></a>
+<a href="http://ludumdare.com/compo/ludum-dare-34/?action=preview&amp;uid=7984"><img class="alignright" src="/static/images/blog/cultivate-post-mortem/7984-shot0-1450145288.png" alt="" width="387" height="215" /></a>
 </div>
 
-<h4><a href="Jam">Grow Your Love (Jam)</a></h4>
+<h4><a href="http://ludumdare.com/compo/ludum-dare-34/?action=preview&uid=7285">Grow Your Love (Jam)</a></h4>
 <div class="image-right">
 <div>
 Another amazing interpretation of the themes. I can't overstate how charmed I was by the aesthetic and music -- though it should be mentioned how cleverly the gameplay is designed. Even for the Jam, I am amazed by the level of polish here.
@@ -154,7 +154,7 @@ Created for/with <a href="http://www.lexaloffle.com/pico-8.php" target="_blank">
 <div>
 A deceptively simple puzzle game. Overall this entry had excellent design, and some really challenging levels. Beyond that, it even incorporates impressive voice-acting between puzzles.
 </div>
-<a href="http://ludumdare.com/compo/ludum-dare-34/?action=preview&amp;uid=15514"><img class="alignright" src="/static/images/blog/cultivate-post-mortem/15514-shot1-1450058247.png-eq-900-500.jpg" alt="" width="387" height="274" /></a>
+<a href="http://ludumdare.com/compo/ludum-dare-34/?action=preview&amp;uid=15514"><img class="alignright" src="/static/images/blog/cultivate-post-mortem/15514-shot1-1450058247.png" alt="" width="387" height="274" /></a>
 </div>
 
 <h4><a href="http://ludumdare.com/compo/ludum-dare-34/?action=preview&amp;uid=22357">Nomads</a></h4>
