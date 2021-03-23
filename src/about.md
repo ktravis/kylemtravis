@@ -4,8 +4,8 @@
 {
     "name":       "Kyle Travis",
     "location":   "Richmond, VA",
-    "occupation": "Lead Software Engineer",
-    "employer":   "Capital One",
+    "occupation": "Senior Software Engineer",
+    "employer":   "Discord",
     "degrees": {
         "University of Oregon": [
             "Math",
@@ -17,15 +17,15 @@
 }
 ```
 
-Kyle Travis is a graduate of the University of Oregon, and works as a lead software engineer on [Critical Stack](https://github.com/criticalstack) at [Capital One](https://github.com/capitalone). When not negotiating with compilers or scanning godocs, Kyle develops small games, programming languages, and web applications.
+Kyle Travis is a graduate of the University of Oregon, and works as a senior software engineer at Discord. When not negotiating with compilers or scanning godocs, Kyle develops small games, programming languages, and web applications.
 
 
 Languages and tools of choice:
 
 - Go
 - C
+- Zig
 - Python
 - Vim
-- Haxe
-- Ubuntu / RHEL / Archlinux
+- Ubuntu / Archlinux
 - Git[hub]
