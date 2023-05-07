@@ -23,9 +23,10 @@ Kyle Travis is a graduate of the University of Oregon, and works as a senior sof
 Languages and tools of choice:
 
 - Go
+- Rust
+- Python
 - C
 - Zig
-- Python
 - Vim
-- Ubuntu / Archlinux
+- Linux
 - Git[hub]
