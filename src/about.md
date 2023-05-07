@@ -4,7 +4,7 @@
 {
     "name":       "Kyle Travis",
     "location":   "Richmond, VA",
-    "occupation": "Senior Software Engineer",
+    "occupation": "Tech Lead Manager, API Infrastructure",
     "employer":   "Discord",
     "degrees": {
         "University of Oregon": [
