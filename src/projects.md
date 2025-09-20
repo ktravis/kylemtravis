@@ -1,1 +1,3 @@
-@template = projects
+---
+template: projects
+---

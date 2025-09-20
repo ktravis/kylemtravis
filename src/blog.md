@@ -1,3 +1,5 @@
-@template = blog
+---
+template: blog
+---
 
 testing

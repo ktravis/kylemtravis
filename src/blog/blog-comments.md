@@ -1,9 +1,10 @@
-@name = Blog Comments With GitHub
-@slug = blog-comments
-@published = 2020-09-09
-@labels = meta
-
-[//]: # (testing)
+---
+name: Blog Comments With GitHub
+slug: blog-comments
+published: 2020-09-09
+labels: meta
+previewLines: 3
+---
 
 _For more background, see my [previous post](https://kylemtravis.com/blog/blogging-with-github) about GitHub Actions._
 

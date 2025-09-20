@@ -3,8 +3,9 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <link media="all" rel="stylesheet" type="text/css" href="/static/materialdesignicons.min.css">
+        <meta name="color-scheme" content="dark light">
         <link rel="stylesheet" href="/static/style.css">
+        <link media="all" rel="stylesheet" type="text/css" href="/static/materialdesignicons.min.css">
         <link rel="stylesheet" href="/static/gfm.css">
         <title>{{ block "title" . }}kylemtravis.com{{ end }}</title>
     </head>
@@ -13,13 +14,9 @@
             <h1><a href="/">~</a>{{ block "breadcrumbs" . }}/kyle-m-travis{{ end }}</h1>
             <nav>
                 <ul class="nav navbar-nav">
-
                 <li><a href="/blog/">Blog</a></li>
-
                 <li><a href="/projects/">Projects</a></li>
-
                 <li><a href="/about/">About</a></li>
-
                 </ul>
             </nav>
         </header>
@@ -31,7 +28,26 @@
         <footer>
         © Copyright 2014-2025 by Kyle Travis.
         </footer>
+        <div id="theme-toggle"><i class="mdi" data-theme="light-theme"></i><i class="mdi" data-theme="dark-theme"></i><i class="mdi" data-theme="auto"></i></div>
 
+    <script type="text/javascript">
+        const theme = localStorage.getItem("theme");
+        if (theme) { document.body.classList.add(theme); }
+        document.querySelectorAll("#theme-toggle i").forEach((el) => {
+            const theme = el.getAttribute("data-theme");
+            el.addEventListener("click", (e) => {
+                document.body.classList.remove("light-theme", "dark-theme");
+                if (theme === "auto") {
+                    localStorage.removeItem("theme");
+                } else {
+                    document.body.classList.add(theme);
+                    localStorage.setItem("theme", theme);
+                }
+            })
+        });
+    </script>
+    <script type="text/javascript" src="/static/prism.js"></script>
+    {{ reloader }}
     </body>
 </html>
 {{ end }}

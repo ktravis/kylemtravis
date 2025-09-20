@@ -1,6 +1,9 @@
-@name = Haxe Signals
-@published = 2014-05-16
-@labels = haxe
+---
+name: Haxe Signals
+published: 2014-05-16
+labels: haxe
+previewLines: 2
+---
 
 A common pattern I find myself following in game development is the message-subscription/callback model -- notifying a group of objects that a certain event has happened, at which point they all go about their business responding in the appropriate ways.
 

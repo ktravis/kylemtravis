@@ -1,14 +1,16 @@
-@name = Blogging With GitHub
-@published = 2020-08-28
-@labels = meta
-
+---
+name: Blogging With GitHub
+published: 2020-08-28
+labels: meta
+previewLines: 15
+---
 _Obligatory "wow it's been so long since I've written here!"_
 
 In an effort to reduce the (admittedly already low) friction of writing blog posts, I'm now hosting this site on
 [netlify](https://netlify.com), which makes it pretty effortless to generate site previews off of pull requests, as well
 as perform the usual tasks like updating DNS, provisioning a Let's Encrypt cert, etc. I'm still using [my own static site generator](https://github.com/ktravis/ssgen) which was easy to integrate with netlify's GitHub App: I set my site's "build command" to `make build`, which runs:
 
-```make
+```makefile
 SSGEN_BIN ?= ./ssgen
 
 build: $(SSGEN_BIN)
