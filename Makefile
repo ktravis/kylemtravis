@@ -10,6 +10,10 @@ build: $(SSGEN)
 	cp -R static/ build/
 
 $(SSGEN):
+	go env GOPATH
+	echo $(GOPATH)
+	go env GOBIN
+	echo $(GOBIN)
 	go install github.com/ktravis/ssgen@latest
 
 serve: $(SSGEN)
