@@ -31,15 +31,8 @@
 {{ define "body" }}
     {{ if .file.Metadata.name }}
         {{ template "article" .file }}
-        <div id="comments">
-          <script src="https://utteranc.es/client.js"
-            repo="ktravis/kylemtravis"
-            issue-term="title"
-            label="blog-post"
-            theme="github-light"
-            crossorigin="anonymous" async>
-          </script>
-        </div>
+        <div id="comments"></div>
+        <script type="text/javascript" src="/static/setup-comments.js"></script>
     {{ else }}
         {{ range .root.blog | sortItems "-published" }}
             <div class="blog-post">
