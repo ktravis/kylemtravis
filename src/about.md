@@ -1,4 +1,6 @@
-@title = about
+---
+title: about
+---
 
 ```json
 {

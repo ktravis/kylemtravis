@@ -9,41 +9,49 @@ jobs:
     - name: checkout
       uses: actions/checkout@v2
     - name: collect-titles
-      run: "grep -E '@name\\s*\\=' ./src/blog/ -R > posts.txt && cat posts.txt"
+      run: "grep -E '^name\\s*\\:' ./src/blog/ -R > posts.txt && cat posts.txt"
+    - name: deps
+      run: |
+        npm install -g js-yaml
     - uses: actions/github-script@v3
       with:
         github-token: ${{secrets.GITHUB_TOKEN}}
         script: |
-          const fs = require("fs")
-          const { owner, repo } = context.repo
-          const result = await github.issues.listForRepo({ owner, repo })
-          const issues = Object.fromEntries(result.data.map(x => [x.title, x]))
-          let lines = fs.readFileSync('posts.txt').toString().split('\n')
+          const fs = require("fs");
+          const yaml = require("js-yaml");
+          const { owner, repo } = context.repo;
+          const result = await github.issues.listForRepo({ owner, repo });
+          const issues = Object.fromEntries(result.data.map(x => [x.title, x]));
+          let lines = fs.readFileSync('posts.txt').toString().split('\n');
           lines.forEach(l => {
-          	l = l.trim()
-          	if (!l) return
-            let [f, nameLine] = l.split(':')
-            let labels = ["blog-post"]
-            const body = fs.readFileSync(f).toString().split('\n').map(x => {
-              if (x.match(/^\s*@labels/)) {
-                labels = labels.concat(x.trim().slice(x.indexOf('=')+1).split(",").map(l => l.trim()))
+            l = l.trim()
+            if (!l) return;
+            let [f, nameLine] = l.split(':', 2);
+            let title = nameLine.slice(nameLine.indexOf(':')+1).trim();
+            let labels = ["blog-post"];
+            let contents = fs.readFileSync(f).toString().trim();
+            if contents.startsWith('---') {
+              const [_, metaString, rest] = contents.split('---', 3);
+              const meta = yaml.load(metaString); 
+              labels = labels.concat(meta['labels'] || []);
+              if (meta['name']) {
+                title = meta['name'].trim();
               }
-              return x
-            }).filter(x => !x.match(/^@/))
-              .join('\n')
+              contents = rest;
+            }
+            const body = contents
               .replace(/(!\[[^\]]*\]\()(\/[^\)]+\))/g, `$1https://github.com/${owner}/${repo}/raw/master$2`) // MD image
               .replace(/(\[[^\]]*\]\()(\/[^\)]+\))/g, `$1https://github.com/${owner}/${repo}/blob/master$2`) // MD link
-              .replace(/(src=")(\/[^"]+")/g, `$1https://github.com/${owner}/${repo}/raw/master$2`) // <img> tag
-            const title = nameLine.slice(nameLine.indexOf('=')+1).trim()
+              .replace(/(src=")(\/[^"]+")/g, `$1https://github.com/${owner}/${repo}/raw/master$2`); // <img> tag
             if (title in issues) {
-              const found = issues[title]
+              const found = issues[title];
               github.issues.update({
                 owner, repo,
                 issue_number: found.number,
                 labels: found.labels.concat(labels),
                 title, body,
-              })
-              return
+              });
+              return;
             }
-            github.issues.create({ owner, repo, title, body, labels })
-          })
+            github.issues.create({ owner, repo, title, body, labels });
+          });

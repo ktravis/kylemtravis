@@ -1,6 +1,8 @@
-@name = FlappyJam
-@published = 2014-02-24
-@labels = haxe,game
+---
+name: FlappyJam
+published: 2014-02-24
+labels: haxe,game
+---
 
 I've just submitted my entry to [itch.io](http://itch.io)'s [FLAPPYJAM](http://itch.io/jam/flappyjam)! See it/[play it here](http://kmakai.itch.io/flee-lethal-avian-pests).
 

@@ -45,7 +45,7 @@
             <div class="blog-post">
                 {{ template "article-header" . }}
 
-                {{ readmore .Content .Path }}
+                {{ readmore .Content .Path .Metadata.previewLines }}
             </div>
         {{ end }}
     {{ end }}
