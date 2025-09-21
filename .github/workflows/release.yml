@@ -7,8 +7,11 @@ jobs:
   announce:
     runs-on: ubuntu-latest
     steps:
+    - uses: actions/setup-node@v4
+      with:
+        node-version: '20.x'
     - run: npm install js-yaml
-    - uses: actions/github-script@v3
+    - uses: actions/github-script@v8
       with:
         github-token: ${{secrets.GITHUB_TOKEN}}
         script: |
