@@ -1,7 +1,7 @@
 ---
 name: Cultivate Post-Mortem
 published: 2016-01-03
-labels: game,ludum-dare,unity
+labels: [game, ludum-dare, unity]
 previewLines: 3
 ---
 
