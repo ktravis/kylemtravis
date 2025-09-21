@@ -9,6 +9,10 @@ build: $(SSGEN)
 
 $(SSGEN):
 	go install github.com/ktravis/ssgen@latest
+	go env
+	echo $$GOBIN
+	echo $$GOPATH
+	ls -la $$HOME/go/bin
 
 serve: $(SSGEN)
 	$(SSGEN) -serve localhost:$(PORT)
