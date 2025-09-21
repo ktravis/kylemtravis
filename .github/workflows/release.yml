@@ -31,7 +31,7 @@ jobs:
           if (newBlogPosts.length < 1)
             return;
 
-          const [_, metaString, _] = newBlogPosts[0].patch.split('---', 3);
+          const [_div, metaString, _rest] = newBlogPosts[0].patch.split('---', 3);
           const meta = yaml.load(metaString); 
           const releaseName = meta['name'];
           const slug = meta['slug'] || releaseName.toLowerCase().replace(/\s+/g, "-").replace(/[^a-zA-Z0-9\-]/g, "");

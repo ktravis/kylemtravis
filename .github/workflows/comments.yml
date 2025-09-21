@@ -31,7 +31,7 @@ jobs:
             let labels = ["blog-post"];
             let contents = fs.readFileSync(f).toString().trim();
             if contents.startsWith('---') {
-              const [_, metaString, rest] = contents.split('---', 3);
+              const [_div, metaString, rest] = contents.split('---', 3);
               const meta = yaml.load(metaString); 
               labels = labels.concat(meta['labels'] || []);
               if (meta['name']) {
