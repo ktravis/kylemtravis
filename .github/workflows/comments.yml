@@ -12,7 +12,7 @@ jobs:
       run: "grep -E '^name\\s*\\:' ./src/blog/ -R > posts.txt && cat posts.txt"
     - name: deps
       run: |
-        npm install -g js-yaml
+        npm install js-yaml
     - uses: actions/github-script@v3
       with:
         github-token: ${{secrets.GITHUB_TOKEN}}
@@ -30,8 +30,8 @@ jobs:
             let title = nameLine.slice(nameLine.indexOf(':')+1).trim();
             let labels = ["blog-post"];
             let contents = fs.readFileSync(f).toString().trim();
-            if contents.startsWith('---') {
-              const [_, metaString, rest] = contents.split('---', 3);
+            if (contents.startsWith('---')) {
+              const [_div, metaString, rest] = contents.split('---', 3);
               const meta = yaml.load(metaString); 
               labels = labels.concat(meta['labels'] || []);
               if (meta['name']) {
