@@ -1,6 +1,8 @@
 .PHONY: clean build deploy 
 
-SSGEN := $(shell go env GOPATH)/bin/ssgen
+GOPATH ?= $(shell go env GOPATH)
+GOBIN ?= $(GOPATH)/bin
+SSGEN := $(GOBIN)/ssgen
 PORT := 8081
 
 build: $(SSGEN)
@@ -9,10 +11,6 @@ build: $(SSGEN)
 
 $(SSGEN):
 	go install github.com/ktravis/ssgen@latest
-	go env
-	echo ${GOBIN}
-	echo ${GOPATH}
-	ls -la ~/go/bin
 
 serve: $(SSGEN)
 	$(SSGEN) -serve localhost:$(PORT)
