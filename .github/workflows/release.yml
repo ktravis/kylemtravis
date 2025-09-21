@@ -24,7 +24,7 @@ jobs:
           let urlBase = "https://kylemtravis.com/blog";
           if (pr.state === "open")
             urlBase = `https://deploy-preview-${pr.number}--kylemtravis.netlify.app/blog`;
-          const result = await github.pulls.listFiles({
+          const result = await github.rest.pulls.listFiles({
             pull_number: pr.number,
             owner: context.repo.owner,
             repo: context.repo.repo,
@@ -48,16 +48,16 @@ jobs:
             body: `New blog post, read it [here](${urlBase}/${slug})!`,
             draft: pr.state === "open",
           };
-          const rels = await github.repos.listReleases({
+          const rels = await github.rest.repos.listReleases({
             owner: context.repo.owner,
             repo: context.repo.repo,
           });
           const found = rels.data.filter(r => r.draft && r.tag_name == rel.tag_name);
           await (found.length > 1 ?
-            github.repos.updateRelease({
+            github.rest.repos.updateRelease({
               release_id: found[0].id,
               ...rel
             }) :
-            github.repos.createRelease(rel)
+            github.rest.repos.createRelease(rel)
           );
 
