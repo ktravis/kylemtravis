@@ -12,7 +12,7 @@ jobs:
       run: "grep -E '^name\\s*\\:' ./src/blog/ -R > posts.txt && cat posts.txt"
     - name: deps
       run: |
-        npm install -g js-yaml
+        npm install js-yaml
     - uses: actions/github-script@v3
       with:
         github-token: ${{secrets.GITHUB_TOKEN}}

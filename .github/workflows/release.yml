@@ -7,7 +7,7 @@ jobs:
   announce:
     runs-on: ubuntu-latest
     steps:
-    - run: npm install -g js-yaml
+    - run: npm install js-yaml
     - uses: actions/github-script@v3
       with:
         github-token: ${{secrets.GITHUB_TOKEN}}
