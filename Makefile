@@ -1,8 +1,8 @@
 .PHONY: clean build deploy 
 
 # GOPATH ?= $(shell go env GOPATH)
-GOBIN ?= $(GOPATH)/bin
-SSGEN := $(GOBIN)/ssgen
+# GOBIN ?= $(GOPATH)/bin
+SSGEN := $(shell go env GOBIN)/ssgen
 PORT := 8081
 
 build: $(SSGEN)
