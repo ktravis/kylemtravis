@@ -384,6 +384,22 @@ div.page {
     font-size: 0.85em;
     margin-top: 0.85em;
 }
+.blog-post video {
+    display: block;
+    max-width: 100%;
+    /* max-height: 360px; */
+    margin: auto;
+    border: 2px solid var(--anchor-color);
+}
+.blog-post video:hover {
+    border-color: var(--anchor-hover-color);
+}
+.blog-post video+em {
+    display: block;
+    text-align: center;
+    font-size: 0.85em;
+    margin-top: 0.85em;
+}
 .blog-post-header {
     margin-right: 7px;
     display: flex;
