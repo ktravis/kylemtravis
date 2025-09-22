@@ -1,7 +1,7 @@
 name: blog-post-create-issues
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
 jobs:
   create:
     runs-on: ubuntu-latest
@@ -41,9 +41,9 @@ jobs:
               contents = rest;
             }
             const body = contents
-              .replace(/(!\[[^\]]*\]\()(\/[^\)]+\))/g, `$1https://github.com/${owner}/${repo}/raw/master$2`) // MD image
-              .replace(/(\[[^\]]*\]\()(\/[^\)]+\))/g, `$1https://github.com/${owner}/${repo}/blob/master$2`) // MD link
-              .replace(/(src=")(\/[^"]+")/g, `$1https://github.com/${owner}/${repo}/raw/master$2`); // <img> tag
+              .replace(/(!\[[^\]]*\]\()(\/[^\)]+\))/g, `$1https://github.com/${owner}/${repo}/raw/main$2`) // MD image
+              .replace(/(\[[^\]]*\]\()(\/[^\)]+\))/g, `$1https://github.com/${owner}/${repo}/blob/main$2`) // MD link
+              .replace(/(src=")(\/[^"]+")/g, `$1https://github.com/${owner}/${repo}/raw/main$2`); // <img> tag
             if (title in issues) {
               const found = issues[title];
               github.rest.issues.update({
