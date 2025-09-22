@@ -1,7 +1,7 @@
 ---
 name: Generating Shader Code (part 1)
 slug: shadergen-pt1
-published: 2025-08-10
+published: 2025-09-21
 previewLines: 13
 ---
 
