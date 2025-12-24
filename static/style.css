@@ -480,3 +480,49 @@ figure figcaption {
 figcaption p {
     margin-top: 0.7em;
 }
+
+.list-item {
+    display: flex;
+    flex-flow: row wrap;
+}
+.list-item > * {
+    flex: 1 100%;
+    order: 1;
+}
+.list-item .wrapper {
+    order: 0;
+    flex: 3;
+}
+.list-item > figure {
+    flex: 1;
+    order: 1;
+    margin: 10px;
+    margin-right: 0px;
+}
+.list-item > iframe {
+    padding: 20px;
+    order: 2;
+}
+
+.mini-list-item {
+    display: flex;
+    flex-flow: row wrap;
+}
+.mini-list-item > * {
+    flex: 1 100%;
+    order: 1;
+}
+.mini-list-item .wrapper {
+    order: 0;
+    flex: 3;
+}
+.mini-list-item > figure {
+    flex: 1;
+    order: 1;
+    margin: 10px;
+    margin-right: 0px;
+}
+.mini-list-item > iframe {
+    padding: 20px;
+    order: 2;
+}
