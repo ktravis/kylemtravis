@@ -218,7 +218,7 @@ I'm expecting to like this very much given their discography, but I haven't been
 </div>
 <div class="mini-list-item">
 
-![conditions of an orphan// deluxe edition album art](https://i.ytimg.com/vi/ED8TUlttYSU/maxresdefault.jpg)
+![conditions of an orphan// deluxe edition album art](https://i.scdn.co/image/ab67616d0000b2731411e356ee434a1f5bd15430)
 
 <div class="wrapper">
 
