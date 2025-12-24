@@ -1,7 +1,10 @@
 ---
 name: My Top Albums of 2025
 slug: top-albums-2025
-labels: [music, lists, 2025]
+labels:
+- music
+- lists
+- 2025
 previewLines: 2
 ---
 
