@@ -6,6 +6,7 @@ labels:
 - lists
 - 2025
 previewLines: 2
+published: 2025-12-24
 ---
 
 2025 has been another banner year for music, at least if you have my particular taste (and if so, we should be friends probably). I don't really go for ranking art, but I felt like sharing my highlights, or some of the ones that brought me the most joy. To keep things contained, this list doesn't include things I only *discovered* in 2025 that were actually released in prior years.
