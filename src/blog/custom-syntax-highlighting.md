@@ -1,6 +1,6 @@
 ---
-name: Customizing Rust Syntax Highlighting in (Neo)Vim
-slug: custom-syntax-highlighting
+name: Custom Syntax Highlighting in (Neo)Vim
+slug: custom-highlighting
 published: 2026-01-17
 labels:
 - vim
