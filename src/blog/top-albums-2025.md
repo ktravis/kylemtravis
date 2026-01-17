@@ -76,7 +76,7 @@ I would challenge anyone not to find something unique and compelling here, and i
 
 ## [*See You In Heaven*](https://softcult.bandcamp.com/album/see-you-in-heaven) by Softcult
 
-Ok so listen, this is technically an LP re-release of two EPs that came out in 2023 & 2024 - is that against the rules? Probably, but I'm including it anyway so that I can mention *Spoiled* which has been literally on repeat for me, writing this sentence I have to put it on again. 
+Ok so listen, this is technically an LP re-release of two EPs that came out in 2023 & 2024 - is that against the rules? Probably, but I'm including it anyway so that I can mention *Spoiled* which has been literally on repeat for me, writing this sentence I have to put it on again.
 
 *I'm water, I'm oil, I'm rotten, I'm spoiled*
 
@@ -89,7 +89,7 @@ Ok so listen, this is technically an LP re-release of two EPs that came out in 2
 
 <div class="wrapper">
 
-## [*K-Pop Demon Hunters Soundtrack*](https://music.youtube.com/playlist?list=OLAK5uy_mvB1b-5JvguorHZ7EsoKx3jYDq4VDvt04) by... various artists 
+## [*K-Pop Demon Hunters Soundtrack*](https://music.youtube.com/playlist?list=OLAK5uy_mvB1b-5JvguorHZ7EsoKx3jYDq4VDvt04) by... various artists
 
 The movie slaps and the soundtrack is basically unassailable. Don't @ me (does anyone still say that?)
 
@@ -102,7 +102,7 @@ The movie slaps and the soundtrack is basically unassailable. Don't @ me (does a
 
 <div class="wrapper">
 
-## [*2000: In Search Of The Endless Sky*](https://fleshwater.bandcamp.com/album/2000-in-search-of-the-endless-sky) by Fleshwater  
+## [*2000: In Search Of The Endless Sky*](https://fleshwater.bandcamp.com/album/2000-in-search-of-the-endless-sky) by Fleshwater
 
 I stumbled onto this during a grunge/noise/shoegaze arc that I'm still riding. I can't describe the feeling that *Last Escape* evokes, but it's perfect to me.
 
@@ -117,7 +117,7 @@ I stumbled onto this during a grunge/noise/shoegaze arc that I'm still riding. I
 
 <div class="wrapper">
 
-## [*Vaxis - Act III: The Father of Make Believe (New Entities Edition)*](https://music.youtube.com/playlist?list=OLAK5uy_kn6U1AqiBglyYzNbOt2wEqNikOITkT2ss) by Coheed and Cambria  
+## [*Vaxis - Act III: The Father of Make Believe (New Entities Edition)*](https://music.youtube.com/playlist?list=OLAK5uy_kn6U1AqiBglyYzNbOt2wEqNikOITkT2ss) by Coheed and Cambria
 
 This didn't initially hit me as hard as 2022's [*Vaxis II: A Window of the Waking Mind*](https://music.youtube.com/playlist?list=OLAK5uy_mv2ulNXLwW--0lUT8Iw57XjmlSp55UVSs), but it has definitely grown on me - especially with the added *New Entities* tracks. Coheed and Cambria have been one of my favorite bands for well over a decade and I'm happy to see them continuing to evolve creatively.
 
