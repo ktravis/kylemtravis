@@ -2,10 +2,10 @@
 name: Customizing Rust Syntax Highlighting in (Neo)Vim
 slug: custom-syntax-highlighting
 published: 2026-01-17
-previewLines: 5
 labels:
 - vim
 - rust
+previewLines: 22
 ---
 
 *Hopefully this post can be found by someone trying to answer the same questions I was, and maybe save some time.*
