@@ -3,7 +3,7 @@ name: Why Write Code "By Hand"
 slug: why-write-code-by-hand
 labels:
 - ai
-previewLines: 3
+previewLines: 4
 published: 2026-11-07
 ---
 
